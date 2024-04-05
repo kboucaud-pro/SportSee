@@ -1,0 +1,21 @@
+@import "./topbar";
+@import "./leftbar";
+
+.top-bar-body {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	.left-bar-body {
+		display: flex;
+		flex-direction: row;
+		flex: 1 1;
+
+		.body {
+			background-color: aqua;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
