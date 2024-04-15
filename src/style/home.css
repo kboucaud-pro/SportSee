@@ -57,7 +57,65 @@
   flex: 1 1;
 }
 .top-bar-body .left-bar-body .body {
-  background-color: aqua;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.top-bar-body .left-bar-body .body .user-data {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+  margin-top: 5%;
+}
+.top-bar-body .left-bar-body .body .user-data .welcome-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: start;
+}
+.top-bar-body .left-bar-body .body .user-data .user-values {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  gap: 5%;
+}
+.top-bar-body .left-bar-body .body .user-data .user-values .user-graphes {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  height: 100%;
+  justify-content: space-between;
+}
+.top-bar-body .left-bar-body .body .user-data .user-values .user-graphes .user-main-graph {
+  width: 100%;
+  height: 53%;
+  background-color: red;
+}
+.top-bar-body .left-bar-body .body .user-data .user-values .user-graphes .user-secondary-graphes {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  width: 100%;
+  height: 43%;
+}
+.top-bar-body .left-bar-body .body .user-data .user-values .user-graphes .user-secondary-graphes .secondary-graph {
+  width: 30%;
+  height: 100%;
+  background-color: #FBFBFB;
+}
+.top-bar-body .left-bar-body .body .user-data .user-values .user-nutriments {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+.top-bar-body .left-bar-body .body .user-data .user-values .user-nutriments .nutriment {
+  width: 80%;
+  height: 20%;
+  background-color: orange;
 }/*# sourceMappingURL=home.css.map */

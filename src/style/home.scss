@@ -13,9 +13,76 @@
 		flex: 1 1;
 
 		.body {
-			background-color: aqua;
 			width: 100%;
 			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.user-data {
+				display: flex;
+				flex-direction: column;
+				width: 80%;
+				height: 80%;
+				margin-top: 5%;
+
+				.welcome-header {
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					justify-content: start;
+				}
+
+				.user-values {
+					display: flex;
+					flex-direction: row;
+					width: 100%;
+					height: 100%;
+					gap: 5%;
+
+					.user-graphes {
+						display: flex;
+						flex-direction: column;
+						width: 65%;
+						height: 100%;
+						justify-content: space-between;
+
+						.user-main-graph {
+							width: 100%;
+							height: 53%;
+							background-color: red;
+						}
+
+						.user-secondary-graphes {
+							display: flex;
+							flex-direction: row;
+							gap: 5%;
+							width: 100%;
+							height: 43%;
+
+							.secondary-graph {
+								width: 30%;
+								height: 100%;
+								background-color: #FBFBFB;
+							}
+						}
+					}
+
+					.user-nutriments {
+						width: 30%;
+						display: flex;
+						flex-direction: column;
+						height: 100%;
+						justify-content: space-between;
+
+						.nutriment {
+							width: 80%;
+							height: 20%;
+							background-color: orange;
+						}
+					}
+				}
+			}
 		}
 	}
 }
