@@ -7,18 +7,22 @@ import { UserApi } from "../api/UserApi.tsx";
 
 import "../style/home.css";
 import ObjectiveCircle from "../components/ObjectiveCircle.tsx";
+import SessionDuration from "../components/SessionDuration.tsx";
+import DailyActivity from "../components/DailyActivity.tsx";
 
 function Home() {
-  const [userData, setUserData] = useState(undefined);
+  const [userData, setUserData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     UserApi.getUserById(12).then(function (response) {
       setUserData(response.data);
+      setLoading(false);
     });
   }, []);
 
-  if (undefined !== userData) {
-    console.log(userData.todayScore);
+  if (!loading) {
+    console.log(userData);
   }
 
   //console.log(process.env.REACT_APP_DATA_MODE);
@@ -28,7 +32,7 @@ function Home() {
       <div className="left-bar-body">
         <Leftbar />
         <div className="body">
-          {undefined === userData ? (
+          {loading ? (
             <span>Chargement en cours</span>
           ) : (
             <div className="user-data">
@@ -38,9 +42,11 @@ function Home() {
               </div>
               <div className="user-values">
                 <div className="user-graphes">
-                  <span className="user-main-graph"></span>
+                  <span className="user-main-graph"><DailyActivity userId={userData.id} /></span>
                   <div className="user-secondary-graphes">
-                    <span className="secondary-graph"></span>
+                    <span className="secondary-graph">
+                      <SessionDuration userId={userData.id} />
+                    </span>
                     <span className="secondary-graph"></span>
                     <span className="secondary-graph">
                       <ObjectiveCircle data={userData.todayScore} />

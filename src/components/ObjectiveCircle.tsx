@@ -20,8 +20,8 @@ function ObjectiveCircle(data) {
         cy="50%"
         innerRadius={60}
         outerRadius={80}
-		startAngle={180}
-		endAngle={540}
+		startAngle={90}
+		endAngle={450}
 		cornerRadius={40}
 		stroke="none"
       >
