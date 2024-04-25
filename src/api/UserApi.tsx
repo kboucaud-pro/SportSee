@@ -18,5 +18,11 @@ export const UserApi = {
 		const response = await axiosApi.get(`/user/${id}/average-sessions`);
 
 		return response.data;
+	},
+
+	getUserPerformance: async function(id) {
+		const response = await axiosApi.get(`/user/${id}/performance`);
+
+		return response.data;
 	}
 }

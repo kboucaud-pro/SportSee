@@ -9,6 +9,7 @@ import "../style/home.css";
 import ObjectiveCircle from "../components/ObjectiveCircle.tsx";
 import SessionDuration from "../components/SessionDuration.tsx";
 import DailyActivity from "../components/DailyActivity.tsx";
+import SkillsRadar from "../components/SkillsRadar.tsx";
 
 function Home() {
   const [userData, setUserData] = useState([]);
@@ -47,7 +48,9 @@ function Home() {
                     <span className="secondary-graph">
                       <SessionDuration userId={userData.id} />
                     </span>
-                    <span className="secondary-graph"></span>
+                    <span className="secondary-graph">
+                      <SkillsRadar userId={userData.id} />
+                    </span>
                     <span className="secondary-graph">
                       <ObjectiveCircle data={userData.todayScore} />
                     </span>
