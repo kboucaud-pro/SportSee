@@ -1,5 +1,5 @@
 import React from "react";
-import { Cell, Label, Pie, PieChart } from "recharts";
+import { Cell, Label, Pie, PieChart, ResponsiveContainer } from "recharts";
 import PieLabel from "./PieLabel.tsx";
 
 function ObjectiveCircle(data) {
@@ -12,27 +12,30 @@ function ObjectiveCircle(data) {
   ];
 
   return (
-    <PieChart width={180} height={180}>
-      <Pie
-        data={pieValues}
-        dataKey="value"
-        cx="50%"
-        cy="50%"
-        innerRadius={60}
-        outerRadius={80}
-		startAngle={90}
-		endAngle={450}
-		cornerRadius={40}
-		stroke="none"
-      >
-        <Cell key="cell-0" fill="#FF0000" />
-        <Cell key="cell-1" fill="#FBFBFB" />
-		<Label
+    <ResponsiveContainer width="100%" height="100%">
+      <PieChart>
+        <Pie
+          data={pieValues}
+          dataKey="value"
+          cx="50%"
+          cy="50%"
+          innerRadius={60}
+          outerRadius={80}
+          startAngle={90}
+          endAngle={450}
+          cornerRadius={40}
+          stroke="none"
+          fill="#FFFFFF"
+        >
+          <Cell key="cell-0" fill="#FF0000" />
+          <Cell key="cell-1" fill="#FBFBFB" />
+          <Label
             content={<PieLabel currentObjective={currentObjective} />}
             position="center"
           />
-      </Pie>
-    </PieChart>
+        </Pie>
+      </PieChart>
+    </ResponsiveContainer>
   );
 }
 
