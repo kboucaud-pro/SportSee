@@ -10,6 +10,7 @@ import ObjectiveCircle from "../components/ObjectiveCircle.tsx";
 import SessionDuration from "../components/SessionDuration.tsx";
 import DailyActivity from "../components/DailyActivity.tsx";
 import SkillsRadar from "../components/SkillsRadar.tsx";
+import Nutriment from "../components/Nutriment.tsx";
 
 function Home() {
   const [userData, setUserData] = useState([]);
@@ -57,10 +58,10 @@ function Home() {
                   </div>
                 </div>
                 <div className="user-nutriments">
-                  <span className="nutriment"></span>
-                  <span className="nutriment"></span>
-                  <span className="nutriment"></span>
-                  <span className="nutriment"></span>
+                  <Nutriment type="Calories" value={userData.keyData.calorieCount} />
+                  <Nutriment type="Proteines" value={userData.keyData.proteinCount} />
+                  <Nutriment type="Glucides" value={userData.keyData.carbohydrateCount} />
+                  <Nutriment type="Lipides" value={userData.keyData.lipidCount} />
                 </div>
               </div>
             </div>

@@ -104,7 +104,30 @@
 						.nutriment {
 							width: 80%;
 							height: 20%;
-							background-color: orange;
+							background-color: #FBFBFB;
+							display: flex;
+							flex-direction: row;
+							align-items: center;
+							justify-content: center;
+
+							.nutriment-infos {
+								display: flex;
+								flex-direction: column;
+								justify-content: flex-start;
+								margin-left: 5%;
+
+								.nutriment-value {
+									color: #282D30;
+									font-size: 20px;
+									font-weight: 700;
+								}
+
+								.nutriment-type {
+									margin-top: 5%;
+									color: #74798C;
+									font-size: 14px;
+								}
+							}
 						}
 					}
 				}

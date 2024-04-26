@@ -140,5 +140,25 @@
 .top-bar-body .left-bar-body .body .user-data .user-values .user-nutriments .nutriment {
   width: 80%;
   height: 20%;
-  background-color: orange;
+  background-color: #FBFBFB;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.top-bar-body .left-bar-body .body .user-data .user-values .user-nutriments .nutriment .nutriment-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 5%;
+}
+.top-bar-body .left-bar-body .body .user-data .user-values .user-nutriments .nutriment .nutriment-infos .nutriment-value {
+  color: #282D30;
+  font-size: 20px;
+  font-weight: 700;
+}
+.top-bar-body .left-bar-body .body .user-data .user-values .user-nutriments .nutriment .nutriment-infos .nutriment-type {
+  margin-top: 5%;
+  color: #74798C;
+  font-size: 14px;
 }/*# sourceMappingURL=home.css.map */
