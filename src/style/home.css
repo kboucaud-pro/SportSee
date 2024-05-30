@@ -144,7 +144,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 10%;
 }
 .top-bar-body .left-bar-body .body .user-data .user-values .user-nutriments .nutriment .nutriment-infos {
   display: flex;

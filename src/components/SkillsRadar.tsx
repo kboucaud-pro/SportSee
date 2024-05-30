@@ -18,9 +18,9 @@ function SkillsRadar(userId) {
 		});
 	}, []);
 
-	if (undefined !== userSkills) {
+	/*if (undefined !== userSkills) {
 		console.log(userSkills);
-	}
+	}*/
 
 	return (
 		<div className="skills-radar">

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { UserApi } from "../api/UserApi.tsx";
-import { Line, LineChart, ResponsiveContainer, XAxis } from "recharts";
+import { Legend, Line, LineChart, ResponsiveContainer, XAxis } from "recharts";
 
 function SessionDuration(userId) {
   const [userAverageSession, setUserAverageSession] = useState(undefined);
@@ -28,6 +28,13 @@ function SessionDuration(userId) {
                 <stop offset="100%" stopColor="#FFFFFF" stopOpacity={1}></stop>
               </linearGradient>
             </defs>
+            <Legend
+              layout="horizontal"
+              verticalAlign="top"
+              align="left"
+              iconSize={0}
+              payload={[{ value: 'Durée moyenne des sessions', type: 'square', color: '#FFFFFF' }]}
+            />
             <XAxis
               dataKey="day"
               stroke="#FFFFFF"

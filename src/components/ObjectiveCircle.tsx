@@ -15,6 +15,17 @@ function ObjectiveCircle(data) {
     <ResponsiveContainer width="100%" height="100%">
       <PieChart>
         <Pie
+          data={[{ background: 1 }]}
+          dataKey="background"
+          cx="50%"
+          cy="50%"
+          innerRadius={0}
+          outerRadius={60}
+          stroke="none"
+          fill="#FFFFFF"
+        >
+        </Pie>
+        <Pie
           data={pieValues}
           dataKey="value"
           cx="50%"

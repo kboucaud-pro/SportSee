@@ -23,9 +23,9 @@ function Home() {
     });
   }, []);
 
-  if (!loading) {
+  /*if (!loading) {
     console.log(userData);
-  }
+  }*/
 
   //console.log(process.env.REACT_APP_DATA_MODE);
   return (

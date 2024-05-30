@@ -34,13 +34,7 @@ function DailyActivity(userId) {
               verticalAlign="top"
               align="right"
               iconType="circle"
-              height={20}
-              margin={{
-                top: 20,
-                right: 0,
-                left: 0,
-                bottom: 5,
-              }}
+              height={36}
             />
             <YAxis width={40} orientation="right" tickCount={3} axisLine={false} tickLine={false} />
             <XAxis tickLine={false} />
